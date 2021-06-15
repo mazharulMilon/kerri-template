@@ -1,0 +1,600 @@
+/* ---------------- import the css of font family */
+@import url(fontCss/poppins.css);
+/* ------- import global css link */
+@import url(global.css);
+
+:root {
+    --dark-white: rgb(238, 232, 232);
+    --white:#ffffff;
+    --paragraph:#C9C8CC;
+    --bg-color-1:#2E3135;
+    --bg-color-2:#26282B;
+}
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 3rem;
+    border: .2rem solid var(--white);
+    color: var(--white);
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight:500;
+    text-transform: uppercase;
+}
+.btn:hover {
+    border-color: var(--main-color);
+    background: var(--main-color);
+}
+
+/* --------------------------
+header part
+------------------------------ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 1.5rem;
+}
+header.active {
+    background: var(--bg-color-1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .3);
+}
+header .navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+header .navbar .logo {
+    color: var(--white);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+header .navbar .nav a {
+    margin: 0 1.5rem;
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+header .navbar .nav a.active {
+    color: var(--main-color);
+}
+header .navbar .nav a:hover {
+    color: var(--main-color);
+}
+#toggler {
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+/* ----------------------------
+home section
+------------------------------- */
+.home__section {
+    background: url(../images/header-bg3.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+}
+.home__section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.home__section .home-content {
+    text-align: center;
+}
+.home__section .home-content h4 {
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+.home__section .home-content h2 {
+    padding: 1rem 0;
+    font-size: 6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.home__section .home-content h2 span {
+    color: var(--main-color);
+}
+.home__section .home-content p {
+    color: var(--paragraph);
+    margin: 0 0 2.5rem;
+}
+
+/* ---------------------------
+about section
+------------------------- */
+.about__section {
+    background: var(--bg-color-1);
+}
+.about__section .row {
+    padding: 4rem 0;
+}
+.about__section .row .about-image {
+    flex: 1 1 50rem;
+    padding: 0 1.5rem;
+}
+.about__section .row .about-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .4rem;
+    border: .5rem solid #3B3E42;
+    height: 100%;
+}
+.about__section .row .about-content {
+    flex: 1 1 50rem;
+}
+.about__section .row .about-content h2 {
+    color: var(--white);
+    font-size: 3rem;
+    letter-spacing: 0.5px;
+}
+
+.about__section .row .about-content h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+.about__section .row .about-content h3 span {
+    font-weight: 600;
+    color: var(--main-color);
+}
+.about__section .row .about-content p {
+    margin: 0 0 1.5rem;
+    color: var(--paragraph);
+    line-height: 2.8rem;
+}
+.about__section .row .about-content .social-links {
+    width: 100%;
+    padding: 1rem;
+}
+.about__section .row .about-content .social-links a {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: .1rem solid var(--dark-white);
+    line-height: 4rem;
+    text-align: center;
+    margin: 0 .5rem;
+    color: var(--dark-white);
+    background: transparent;
+    font-size: 1.7rem;
+}
+.about__section .row .about-content .social-links a:hover {
+    background: var(--main-color);
+    color: var(--dark-white);
+}
+
+/* -----------------------
+services section 
+----------------------- */
+.services__section {
+    background: var(--bg-color-2);
+}
+.services__section .row {
+    gap: 2rem;
+}
+.services__section .row .services-item {
+    flex: 1 1 30rem;
+    text-align: center;
+    border: .1rem solid #33373E;
+    padding: 1rem 1.5rem;
+}
+.services__section .row .services-item .icon {
+    color: var(--main-color);
+    font-size: 4rem;
+}
+.services__section .row .services-item h2 {
+    padding: 1.2rem 0;
+    color: var(--white);
+    position: relative;
+}
+.services__section .row .services-item h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: .2rem;
+    background: var(--main-color);
+    margin: 0 0 1rem;
+}
+.services__section .row .services-item p {
+    color: var(--paragraph);
+    margin: 0 0 1.5rem;
+}
+
+/* ---------------------
+freelance section
+--------------------- */
+.freelance__section {
+    background-color: var(--bg-color-1);
+}
+.freelance__section .row {
+    justify-content: center;
+    align-items: center;
+}
+.freelance__section .row .freelance-content {
+    text-align: center;
+    padding: 1rem 0;
+}
+.freelance__section .row .freelance-content h2 {
+    padding: 2rem 0;
+    color: var(--white);
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.freelance__section .row .freelance-content .btn {
+    background: var(--main-color);
+    border-radius: .5rem;
+    border-color: transparent;
+}
+/* ----------------------
+client section
+----------------------- */
+.client__section {
+    background: var(--bg-color-2);
+}
+.client__section .client-slider {
+    max-width: 111rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.client__section .client-slider .icon {
+    font-size: 6rem;
+    color: var(--main-color);
+    margin: 0 0 1.5rem;
+}
+.client__section .client-slider img {
+    border-radius: 50%;
+    border: .5rem solid #26282B;
+    max-width: 14rem;
+    width: 100%;
+    margin: 0 0 1.5rem;
+}
+.client__section .client-slider p {
+    margin: 0 0 1.5rem;
+    color: var(--paragraph);
+}
+.client__section .client-slider h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+.swiper-pagination-bullet {
+    width: 1rem;
+    border-radius: 50%;
+    margin: 0 .7rem;
+}
+.swiper-pagination-bullet-active {
+    width: 2.5rem;
+    border-radius: 2rem;
+    background: var(--main-color) !important;
+}
+.swiper-button-prev, .swiper-button-next {
+    color: var(--main-color) !important;
+}
+
+
+/* -----------------------------
+portfolio section
+-------------------------- */
+.portfolio__section {
+    background: var(--bg-color-1);
+}
+.portfolio__section .portfolio-nav {
+    width: 100%;
+}
+.portfolio__section .portfolio-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 70rem;
+    margin: 60px auto;
+}
+.portfolio__section .portfolio-nav ul li {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    cursor: pointer;
+    letter-spacing: 00.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2.5rem;
+}
+.portfolio__section .portfolio-nav ul li.active {
+    background: var(--main-color);
+}
+.portfolio__section .row .portfolio-item {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.portfolio__section .row .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio__section .row .portfolio-item.active {
+    display: block;
+    animation: PActive 0.5s ease-in-out;
+}
+.portfolio__section .row .portfolio-item.hide {
+    display: none;
+}
+@keyframes PActive{
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+ 
+
+
+/* --------------------------
+blog section
+----------------------- */
+.blog__section {
+    background: var(--bg-color-2);
+}
+
+.blog__section .blog-item {
+    flex: 1 1 30rem;
+    padding: 1rem;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+}
+.blog__section .blog-item img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+.blog__section .blog-item h3 {
+    margin-top: 0.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--white);
+}
+.blog__section .blog-item .date {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+.blog__section .blog-item .date span {
+    font-weight: 500;
+    color: var(--main-color);
+}
+.blog__section .blog-item p {
+    margin: 0 0 1rem;
+    color: var(--paragraph);
+}
+.blog__section .blog-item a {
+    color: var(--dark-white);
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+}
+.blog__section .blog-item a:hover {
+    color: var(--main-color);
+}
+
+/* -------------------------
+contact section
+---------------------------- */
+.contact__section {
+    background: var(--bg-color-1);
+}
+.contact__section .row.contact-items{
+    margin-bottom: 5rem;
+}
+.contact__section .row .contact-item {
+    flex: 1 1 30rem;
+    text-align: center;
+    border: .2rem solid #33373E;
+    padding: 4rem;
+    border-radius: .4rem;
+}
+.contact__section .row .contact-item i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+.contact__section .row .contact-item h3 {
+    padding: 1rem 0;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+.contact__section .row .contact-item span {
+    font-size: 1.7rem;
+    color: var(--paragraph);
+    text-transform: capitalize;
+}
+.contact__section  form {
+    width: 100%;
+}
+.contact__section form .form-group-50 {
+    width: calc(50% - 1rem);
+    margin: 0 0 2rem;
+}
+.contact__section form .form-group-100 {
+    width: 100%;
+}
+.contact__section form input, textarea {
+    border: .1rem solid #3B3E42;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    outline: none;
+    color: var(--dark-white);
+    background: transparent;
+    font-size: 1.7rem;
+}
+.contact__section form  textarea {
+    height: 18rem;
+    resize: none;
+}
+.contact__section form input::placeholder , textarea::placeholder {
+    text-transform: capitalize;
+    font-size: 1.7rem;
+}
+.contact__section form .submit-button {
+    margin-top: 1rem;
+    text-align: right;
+    width: 100%;
+}
+.contact__section form .submit-button .btn {
+    background: var(--main-color);
+    border-color: transparent;
+    border-radius: .5rem;
+}
+.footer {
+    background: var(--bg-color-2);
+}
+.footer .row {
+    justify-content: center;
+    align-items: center;
+}
+.footer .row .footer-content {
+    text-align: center;
+}
+.footer .row .footer-content .social-links a {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    background: var(--bg-color-1);
+    border-radius: 50%;
+    color: var(--dark-white);
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.7rem;
+    margin: 2rem 1rem;
+}
+.footer .row .footer-content p {
+    font-size: 1.8rem;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background: var(--main-color);
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+    border-radius: .4rem;
+    z-index: 100;
+    transform: translateY(-10rem);
+    opacity: 0;
+}
+#scrollTop.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- media queries ------------------ */
+
+
+@media (max-width:991px){
+    html {
+        font-size: 55%;
+    }
+    .inner-width {
+        max-width: 99rem;
+        padding: 0 3rem
+    }
+}
+@media (max-width:768px){
+    .inner-width {
+        max-width: 78.6rem;
+        padding: 0 2rem;
+    }
+    #toggler {
+        display: initial;
+    }
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background: var(--bg-color-2);
+        text-align: center;
+        padding: 0 2rem;
+        padding-bottom: 4rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .nav a {
+        display: block;
+        padding:2rem;
+        background: var(--bg-color-1);
+        margin: 2rem 0 !important;
+        color: var(--paragraph);
+        border-radius: .5rem;
+    }
+    .contact__section form .form-group-50 {
+        width: 100%;
+    }
+}
+
+@media (max-width:400px){
+    html {
+        font-size: 50%;
+    }
+    .inner-width {
+        max-width: 40rem;
+        padding: 0 1rem;
+    }
+}
